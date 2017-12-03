@@ -3,10 +3,10 @@ import { Provider } from 'react-redux'
 import { applyMiddleware, compose, createStore } from 'redux'
 import { createLogger } from 'redux-logger'
 import React from 'react'
-import RootContainer from './js/root/root.container'
+import AppContainer from './js/container'
 import createSagaMiddleware from 'redux-saga'
 import mySaga from './js/saga'
-import reducer from './js/root/root.reducer'
+import reducer from './js/reducer'
 
 const loggerMiddleware = createLogger({})
 const sagaMiddleware = createSagaMiddleware()
@@ -20,12 +20,13 @@ const configureStore = ( initialState ) => {
 }
 
 const store = configureStore({})
+console.log(store.getState())
 
 sagaMiddleware.run(mySaga)
 
 const App = () => (
   <Provider store={store}>
-    <RootContainer />
+    <AppContainer />
   </Provider>
 )
 
