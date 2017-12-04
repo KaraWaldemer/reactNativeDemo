@@ -1,0 +1,1 @@
+export const SET_PICKER_ANSWER = 'SET_PICKER_ANSWER'
