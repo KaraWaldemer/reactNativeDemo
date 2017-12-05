@@ -1,9 +1,8 @@
 import { DemoStackNavigator } from '../component/Nav.component'
 import { addNavigationHelpers } from 'react-navigation'
 import { connect } from 'react-redux'
-import React from 'react'
 import PropTypes from 'prop-types'
-import ReactNative from 'react-native'
+import React from 'react'
 
 const AppContainer = ({ dispatch, nav }) => (
   <DemoStackNavigator

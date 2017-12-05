@@ -6,3 +6,27 @@ export const pickerAnswer = createReducer('', {
     return action.pickerAnswer
   },
 })
+
+export const sliderAnswer = createReducer(0, {
+  [types.SET_SLIDER_ANSWER]( state, action ) {
+    return action.sliderAnswer
+  },
+})
+
+export const switchAnswer = createReducer(false, {
+  [types.SET_SWITCH_ANSWER]( state, action ) {
+    return action.switchAnswer
+  },
+})
+
+export const textAnswer = createReducer('', {
+  [types.SET_TEXT_ANSWER]( state, action ) {
+    return action.textAnswer
+  },
+})
+
+export const multiTextAnswer = createReducer('', {
+  [types.SET_MULTI_TEXT_ANSWER]( state, action ) {
+    return action.multiTextAnswer
+  },
+})
