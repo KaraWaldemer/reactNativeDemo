@@ -1,8 +1,7 @@
 import { StackNavigator, TabNavigator } from 'react-navigation'
+import HardwareContainer from '../container/Hardware.container'
 import LandingContainer from '../container/Landing.container'
-import PictureContainer from '../container/Picture.container'
 import QuestionContainer from '../container/Question.container'
-import React from 'react'
 
 export const DemoTabNavigator = TabNavigator({
   Question: {
@@ -11,10 +10,10 @@ export const DemoTabNavigator = TabNavigator({
       title: 'Question',
     },
   },
-  Picture: {
-    screen: PictureContainer,
+  Hardware: {
+    screen: HardwareContainer,
     navigationOptions: {
-      title: 'Picture',
+      title: 'Hardware',
     },
   },
 })
@@ -31,5 +30,5 @@ export const DemoStackNavigator = StackNavigator({
     navigationOptions: {
       title: 'Demo Actions',
     },
-  }
+  },
 })
