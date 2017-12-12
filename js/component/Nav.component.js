@@ -2,6 +2,7 @@ import { StackNavigator, TabNavigator } from 'react-navigation'
 import HardwareContainer from '../container/Hardware.container'
 import LandingContainer from '../container/Landing.container'
 import QuestionContainer from '../container/Question.container'
+import NativeContainer from '../container/Native.container'
 
 export const DemoTabNavigator = TabNavigator({
   Question: {
@@ -14,6 +15,12 @@ export const DemoTabNavigator = TabNavigator({
     screen: HardwareContainer,
     navigationOptions: {
       title: 'Hardware',
+    },
+  },
+  Native: {
+    screen: NativeContainer,
+    navigationOptions: {
+      title: 'Native',
     },
   },
 })
