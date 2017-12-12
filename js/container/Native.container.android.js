@@ -1,9 +1,9 @@
-import { View } from 'react-native'
+import { Text, View } from 'react-native'
 import React from 'react'
 
 const NativeContainer = () => (
   <View>
-    Native Code
+    <Text>Native Code</Text>
   </View>
 )
 
