@@ -12,4 +12,10 @@ public class MainActivity extends ReactActivity {
     protected String getMainComponentName() {
         return "reactNativeDemo";
     }
+
+    protected List<ReactPackage> getPackages() {
+        return Arrays.<ReactPackage>asList(
+                new MainReactPackage(),
+                new AnExampleReactPackage()); // <-- Add this line with your package name.
+    }
 }
