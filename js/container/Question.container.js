@@ -1,13 +1,13 @@
 import * as questionActions from '../action/question.action'
 import {
   Alert,
-  Button,
   Picker,
   ScrollView,
   Slider,
   Switch,
   Text,
   TextInput,
+  TouchableOpacity,
   View,
 } from 'react-native'
 import { bindActionCreators } from 'redux'
@@ -28,7 +28,7 @@ const QuestionContainer = ({
   setSwitchAnswer,
   setTextAnswer,
 }) => (
-  <ScrollView keyboardShouldPersistTaps="never" scrollEnabled={false} style={styles.questionWindow}>
+  <ScrollView keyboardShouldPersistTaps="never" style={styles.questionWindow}>
     <View style={styles.questionWrapper}>
       <Text style={styles.label}>Single Line Text:</Text>
       <TextInput
@@ -82,10 +82,12 @@ const QuestionContainer = ({
         value={switchAnswer}
       />
     </View>
-    <Button
+    <TouchableOpacity
       onPress={() => Alert.alert('Answers Submitted')}
-      title="Submit"
-    />
+      style={styles.submitButton}
+    >
+      <Text style={styles.buttonText}>Submit</Text>
+    </TouchableOpacity>
   </ScrollView>
 )
 

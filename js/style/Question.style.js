@@ -44,4 +44,21 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderRadius: 5,
   },
+  submitButton: {
+    backgroundColor: '#5b83c2',
+    borderColor: '#5b83c2',
+    borderRadius: 5,
+    borderWidth: 1,
+    margin: 10,
+    height: 36,
+    paddingLeft: 16,
+    paddingRight: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  buttonText: {
+    fontSize: 16,
+    color: '#ffffff',
+    fontWeight: 'bold',
+  },
 })
