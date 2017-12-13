@@ -1,8 +1,8 @@
 import { StackNavigator, TabNavigator } from 'react-navigation'
 import HardwareContainer from '../container/Hardware.container'
 import LandingContainer from '../container/Landing.container'
-import QuestionContainer from '../container/Question.container'
 import NativeContainer from '../container/Native.container'
+import QuestionContainer from '../container/Question.container'
 
 export const DemoTabNavigator = TabNavigator({
   Question: {
