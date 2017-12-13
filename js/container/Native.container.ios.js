@@ -1,10 +1,33 @@
-import { Text, View } from 'react-native'
+import { Button, Text, View } from 'react-native'
 import React from 'react'
+import RNCalendarEvents from 'react-native-calendar-events'
+
 
 const NativeContainer = () => (
   <View>
     <Text>Native Code</Text>
+    <Button
+      accessibilityLabel="Learn more about this purple button"
+      color="#841584"
+      onPress={() => {
+        console.log(RNCalendarEvents)
+        RNCalendarEvents.saveEvent('Demo Event', {
+          location: 'location',
+          notes: 'notes',
+          startDate: '2017-15-19T19:26:00.000Z',
+          endDate: '2017-12-15T19:26:00.000Z'
+        })
+        .then(id => {
+          console.log('I work')
+        })
+        .catch(error => {
+          console.log('i failed')
+        });
+      }}
+      title="Add a calendar event"
+    />
   </View>
+
 )
 
 
