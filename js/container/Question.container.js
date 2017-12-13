@@ -3,8 +3,10 @@ import {
   Alert,
   Button,
   Picker,
+  ScrollView,
   Slider,
   Switch,
+  Text,
   TextInput,
   View,
 } from 'react-native'
@@ -12,6 +14,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import React from 'react'
+import styles from '../style/Question.style'
 
 const QuestionContainer = ({
   multiTextAnswer,
@@ -25,40 +28,65 @@ const QuestionContainer = ({
   setSwitchAnswer,
   setTextAnswer,
 }) => (
-  <View>
-    <Picker
-      onValueChange={setPickerAnswer}
-      selectedValue={pickerAnswer}
-    >
-      <Picker.Item label="Java" value="java" />
-      <Picker.Item label="JavaScript" value="js" />
-    </Picker>
-    <Slider
-      maximumValue={10}
-      minimumValue={1}
-      onValueChange={setSliderAnswer}
-      step={1}
-      value={sliderAnswer}
-    />
-    <Switch
-      onValueChange={setSwitchAnswer}
-      value={switchAnswer}
-    />
-    <TextInput
-      onChangeText={setTextAnswer}
-      value={textAnswer}
-    />
-    <TextInput
-      multiline
-      numberOfLines={4}
-      onChangeText={setMultiTextAnswer}
-      value={multiTextAnswer}
-    />
+  <ScrollView keyboardShouldPersistTaps="never" scrollEnabled={false} style={styles.questionWindow}>
+    <View style={styles.questionWrapper}>
+      <Text style={styles.label}>Single Line Text:</Text>
+      <TextInput
+        onChangeText={setTextAnswer}
+        style={styles.textInputStyle}
+        value={textAnswer}
+      />
+    </View>
+    <View style={styles.questionWrapper}>
+      <Text style={styles.label}>Multi Line Text:</Text>
+      <TextInput
+        multiline
+        numberOfLines={4}
+        onChangeText={setMultiTextAnswer}
+        style={styles.textInputStyle}
+        value={multiTextAnswer}
+      />
+    </View>
+    <View style={styles.questionWrapper}>
+      <Text style={styles.label}>Picker:</Text>
+      <View style={styles.picker}>
+        <Picker
+          itemStyle={styles.pickerItem}
+          onValueChange={setPickerAnswer}
+          selectedValue={pickerAnswer}
+        >
+          <Picker.Item label="Java" value="java" />
+          <Picker.Item label="JavaScript" value="js" />
+        </Picker>
+      </View>
+    </View>
+    <View style={styles.questionWrapper}>
+      <Text style={styles.label}>Slider:</Text>
+      <Slider
+        maximumValue={10}
+        minimumValue={1}
+        onValueChange={setSliderAnswer}
+        step={1}
+        value={sliderAnswer}
+      />
+      <View style={styles.sliderValues}>
+        <Text style={styles.minValue}>1</Text>
+        <Text style={styles.maxValue}>10</Text>
+      </View>
+    </View>
+    <View style={styles.questionWrapper}>
+      <Text style={styles.label}>Switch:</Text>
+      <Switch
+        onValueChange={setSwitchAnswer}
+        tintColor="#5b83c2"
+        value={switchAnswer}
+      />
+    </View>
     <Button
       onPress={() => Alert.alert('Answers Submitted')}
       title="Submit"
     />
-  </View>
+  </ScrollView>
 )
 
 QuestionContainer.propTypes = {
