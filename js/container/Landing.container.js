@@ -1,25 +1,33 @@
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import ActionCreators from '../action'
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 import ReactNative from 'react-native'
+import styles from '../style/Landing.style'
 
 const {
-  Button,
   Text,
+  TouchableOpacity,
   View,
 } = ReactNative
 
 const LandingContainer = ({
   navigation,
 }) => (
-  <View style={{flex: 1, marginTop: 20, alignItems: 'center'}}>
-    <View style={{ flex: 1 }}>
-      <Button
+  <View style={styles.landingWindow}>
+    <View style={styles.welcomeView}>
+      <Text style={styles.welcomeText}>
+        Welcome to the React Native code demo!
+      </Text>
+    </View>
+    <View style={styles.demoButtonView}>
+      <TouchableOpacity
         onPress={() => navigation.navigate('Demo')}
-        title="Start Demo"
-      />
+        style={styles.demoButton}
+      >
+        <Text style={styles.buttonText}>Start Demo</Text>
+      </TouchableOpacity>
     </View>
   </View>
 )
