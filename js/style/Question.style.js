@@ -1,10 +1,6 @@
 import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
-  questionScrollWindow: {
-    flex: 1,
-    margin: 20,
-  },
   questionWindow: {
     flex: 1,
     margin: 20,
@@ -53,6 +49,7 @@ export default StyleSheet.create({
     height: 36,
     paddingLeft: 16,
     paddingRight: 16,
+    alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'center',
   },

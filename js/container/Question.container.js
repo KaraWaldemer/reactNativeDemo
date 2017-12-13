@@ -28,7 +28,10 @@ const QuestionContainer = ({
   setSwitchAnswer,
   setTextAnswer,
 }) => (
-  <ScrollView keyboardShouldPersistTaps="never" style={styles.questionWindow}>
+  <ScrollView
+    keyboardShouldPersistTaps="never"
+    style={styles.questionWindow}
+  >
     <View style={styles.questionWrapper}>
       <Text style={styles.label}>Single Line Text:</Text>
       <TextInput

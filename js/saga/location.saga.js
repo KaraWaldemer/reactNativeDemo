@@ -3,7 +3,7 @@ import { call, put as dispatch, takeEvery } from 'redux-saga/effects'
 import { setLocation } from '../action/location.action'
 
 export const getLocation = () => new Promise(( resolve ) => {
-  navigator.geolocation.getCurrentPosition( ( response ) => {
+  navigator.geolocation.getCurrentPosition(( response ) => {
     resolve(response)
   })
 })

@@ -1,10 +1,11 @@
 import * as imageActions from '../action/image.action'
 import * as locationActions from '../action/location.action'
-import { Button, Image, Text, View } from 'react-native'
+import { Image, Text, TouchableOpacity, View } from 'react-native'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import React from 'react'
+import styles from '../style/Hardware.style'
 
 const HardwareContainer = ({
   image,
@@ -12,22 +13,26 @@ const HardwareContainer = ({
   getLocation,
   location,
 }) => (
-  <View>
-    <View>
-      <Text>GPS Coordinates:</Text>
-      <Text>Latitude: {location.latitude || ''}</Text>
-      <Text>Longitude: {location.longitude || ''}</Text>
-      <Button
+  <View style={styles.hardwareWindow}>
+    <View style={styles.gpsView}>
+      <Text style={styles.labelStyle}>GPS Coordinates:</Text>
+      <Text style={styles.contentStyle}>Latitude: {location.latitude || ''}</Text>
+      <Text style={styles.contentStyle}>Longitude: {location.longitude || ''}</Text>
+      <TouchableOpacity
         onPress={getLocation}
-        title="Get Location"
-      />
+        style={styles.buttonStyle}
+      >
+        <Text style={styles.buttonText}>Get Location</Text>
+      </TouchableOpacity>
     </View>
-    <View>
-      <Button
+    <View style={styles.imageView}>
+      <Image source={{ uri: image.uri }} style={styles.imageStyle} />
+      <TouchableOpacity
         onPress={getImage}
-        title="Get Image"
-      />
-      <Image source={{ uri: image.uri }} style={{ width: 100, height: 100 }} />
+        style={styles.buttonStyle}
+      >
+        <Text style={styles.buttonText}>Get Image</Text>
+      </TouchableOpacity>
     </View>
   </View>
 )
