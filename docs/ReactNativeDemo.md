@@ -27,7 +27,7 @@ React Native has done a lot of maturing over the last few years and offers a lot
 
 ## One Codebase
 
-No need to make changes in multiple places to make sure each platform has all features.
+No need to make changes in multiple places to make sure each platform has all features
 
 Notes:
 Single codebase for both mobile environments with the majority of the code shared.
@@ -57,6 +57,8 @@ Just like you can do when using React to develop in the web, when you make a cha
 
 As with most technologies that make developers lives easier, React Native is not without its pitfalls
 
+Notes:
+It is both a positive and a negative that you are using JS & React. It feels familiar and the learning curve is smaller but it is easy to write 'web' code to run natively and that does not always provide the best mobile user experiences.
 
 ## Performance
 
