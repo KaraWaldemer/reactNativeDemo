@@ -23,6 +23,8 @@ export const DemoTabNavigator = TabNavigator({
       title: 'Native',
     },
   },
+}, {
+  backBehavior: 'none',
 })
 
 export const DemoStackNavigator = StackNavigator({
