@@ -8,6 +8,6 @@
  */
 import { NativeModules } from 'react-native'
 
+const ToastExample = NativeModules.ToastExample
 
-module.exports = NativeModules.ToastExample
-
+module.exports = ToastExample

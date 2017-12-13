@@ -1,15 +1,20 @@
-import { Text, View } from 'react-native'
+import { Button, Text, View } from 'react-native'
+import { ToastExample } from '../../android_modules/nativeModules'
 import React from 'react'
-import ToastExample from '../../android_modules/nativeModules'
 
+
+const randomFunction = () => {
+  ToastExample.show('Awesome', ToastExample.SHORT)
+}
 
 const NativeContainer = () => (
   <View>
     <Text>Native Code</Text>
+    <Button
+      onPress={randomFunction()}
+      title="Android Button"
+    />
   </View>
 )
-
-ToastExample.show('Awesome', ToastExample.SHORT)
-
 
 export default NativeContainer
