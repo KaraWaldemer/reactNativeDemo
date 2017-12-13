@@ -7,7 +7,7 @@ A cross-platform native solution
 
 ## What is it?
 
-React Native is a tool that allows developers to write native applications on both iOS and Android using one codebase and the familiar React model
+React Native allows developers to write native applications on both iOS and Android using the familiar React model
 
 Notes:
 React Native lets you build mobile apps using only JavaScript. It uses the same design as React, letting you compose a rich mobile UI from declarative components.
@@ -22,12 +22,12 @@ React Native combines smoothly with components written in Objective-C, Java, or 
 
 ## Benefits
 
-What it does well
+React Native has done a lot of maturing over the last few years and offers a lot of benefits when writing mobile applications
 
 
 ## One Codebase
 
-Show some source code and screenshots of android and iOS
+No need to make changes in multiple places to make sure each platform has all features.
 
 Notes:
 Single codebase for both mobile environments with the majority of the code shared.
@@ -36,7 +36,7 @@ Helps avoid cases of one platform getting features before another if the other g
 
 ## Integration with native components
 
-It is entirely possible to utilize iOS and Android native components and code.
+It is entirely possible to utilize iOS and Android native components and code
 
 Notes:
 Particularly helpful if there is an existing component you want to use on one of the platforms. React Native can just call it and write a separate file for the other platform using one of its native components or a React Native one.
@@ -44,8 +44,9 @@ Particularly helpful if there is an existing component you want to use on one of
 
 ## Hot Reloading
 
-One of the biggest frustrations of mobile development is the constant recompilation.
-React Native fixes that issue.
+One of the biggest frustrations of mobile development is constant recompiling
+
+React Native fixes that issue
 
 Notes:
 Just like you can do when using React to develop in the web, when you make a change, you only need to refresh the simulator/emulator to see the change reflected. However, if you change any of the native configurations or code, you will have to recompile. Since most of your code is written in JavaScript this is usually a much less painful process than purely native solutions.
@@ -54,12 +55,12 @@ Just like you can do when using React to develop in the web, when you make a cha
 
 ## Detriments
 
-As with most technologies that make developers lives easier, React Native is not without its pitfalls.
+As with most technologies that make developers lives easier, React Native is not without its pitfalls
 
 
 ## Performance
 
-Communication between the API controlling the underlying hardware and the JavaScript on the virtual machine is the crux of the problem.
+Communication between the API controlling the underlying hardware and the JavaScript on the virtual machine is the crux of the problem
 
 Notes:
 Animations in particular require a lot of communication, slowing the application down.
@@ -74,7 +75,7 @@ One of the best parts about this approach is that we can adopt it incrementally,
 
 ## Maturity
 
-React Native is a fairly young technology. It has seen a lot of growth since then, and there are many libraries to pick from, but they too are not that old.
+React Native is a fairly young technology. It has seen a lot of growth since then, and there are many libraries to pick from, but they too are not that old
 
 Notes:
 The progress made in the last two years has made React Native a good contender when writing a mobile solution but the reliability and availability of some of the functionality mobile developers have come to expect is still questionable at times. You may have to develop your own wrappers on top of native code to achieve the results you want but React Native makes it easy to do that and easy to swap it for a different solution later as needed.
@@ -82,9 +83,13 @@ The progress made in the last two years has made React Native a good contender w
 
 
 ## Demo
-Here's some sample code
+
+![Demo Screenshot](./reactNativeDemo.png)
+
+<small>[See the code!](https://github.com/KaraWaldemer/reactNativeDemo)</small>
 
 
 
 ## Summary
-Here is what I think
+
+React Native has a lot of potential but also a lot of room to grow.
