@@ -1,4 +1,5 @@
 import { StackNavigator, TabNavigator } from 'react-navigation'
+import FlatListContainer from '../container/FlatList.container'
 import HardwareContainer from '../container/Hardware.container'
 import LandingContainer from '../container/Landing.container'
 import NativeContainer from '../container/Native.container'
@@ -17,10 +18,10 @@ export const DemoTabNavigator = TabNavigator({
       title: 'Hardware',
     },
   },
-  Native: {
-    screen: NativeContainer,
+  List: {
+    screen: FlatListContainer,
     navigationOptions: {
-      title: 'Native',
+      title: 'List',
     },
   },
 }, {
