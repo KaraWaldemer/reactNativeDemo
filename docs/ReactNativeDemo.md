@@ -60,6 +60,7 @@ As with most technologies that make developers lives easier, React Native is not
 Notes:
 It is both a positive and a negative that you are using JS & React. It feels familiar and the learning curve is smaller but it is easy to write 'web' code to run natively and that does not always provide the best mobile user experiences.
 
+
 ## Performance
 
 Communication between the API controlling the underlying hardware and the JavaScript on the virtual machine is the crux of the problem
