@@ -5,7 +5,7 @@
       1. [React Native CLI](#react-native-cli)
       2. [Setting up iOS](#setting-up-ios)
       3. [Setting up Android](#setting-up-android)
-      4. [Running the Project](#running-project)
+      4. [Reloading & Debugging](#reload-debugging)
   2. [The Code](#the-code)
       1. [Redux](#redux)
       2. [Navigation](#navigation)
@@ -18,7 +18,7 @@
 
 ## <a id="getting-started"></a>Getting Started
 
-React Native requires that you have Node and NPM installed and configured. This guide will assume that you have already completed that step and have a basic understanding of both Node and React. If you need a refresher, please check out the documentation for [Node](https://nodejs.org/en/) and [React](https://reactjs.org/).
+React Native requires that you have Node and NPM installed and configured. This guide will assume that you have already completed that step and have a basic understanding of both Node and React. If you need a refresher, please check out the documentation for [Node](https://nodejs.org/en/) and [React](https://reactjs.org/). For a presentation on the basics of React Native, please go [here](https://thegingertechie.com/reactNativeDemo).
 
 #### <a id="react-native-cli"></a>React Native CLI
 
@@ -58,10 +58,13 @@ After the appropriate SDK is installed, you will also have to create an emulator
 
 Unlike when running iOS, React Native does not allow you to choose the emulator you would like to run from the command line and does not start one for you. Instead, you will have to choose and manually start the emulator you want before running the project. Once the emulator is running, simply enter `react-native run-android` and watch it go.
 
-#### <a id="running-project"></a>Running the Project
+#### <a id="reload-debugging"></a>Reloading & Debugging
 
+Once you have the code running in the iOS simulator or the Android emulator, the real fun can begin. One of the biggest benefits to using React Native is its Hot Reloading ability. If you have ever done mobile development before, you have probably faced the immense irritation of waiting for your project to recompile before you can test the changes you just made. React Native fixes this issue by allowing you to reload the project and immediately see the changes like in the web. Even if there were no other benefits to using React Native, this would be a selling point. By press `cmd r` in the iOS simulator or typing `rr` in the Android emulator, your project will immediately reload taking any new changes to the JavaScript code. Of course, if you make changes to any of the native code or configuration you will have to recompile the whole project but Hot Reloading is a life saver the majority of the time.
 
-## <a id="getting-started"></a>Getting Started
+React Native also provides convenient tools for debugging your application as you are running it. Since we are writing JavaScript, React Native provides a remote debugger that will let you inspect your code, place break points, and watch console output from your preferred browser. Simply press `cmd d` in the iOS simulator or `cmd m` in the Android emulator. This will bring up the developer menu where you can select `Enable Remote Debugging`. Your app will then reload and the remote debugging window will appear. You can turn off remote debugging by following the same commands as above and selecting `Disable Remote Debugging`. If you need to debug native code, you will have to fall back on the debugging capabilities in Xcode and Android Studio.
+
+## <a id="getting-started"></a>Getting Started with React Native
 
 #### <a id="redux"></a>Redux
 #### <a id="navigation"></a>Navigation
