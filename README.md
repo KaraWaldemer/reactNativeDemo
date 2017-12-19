@@ -6,7 +6,7 @@
       2. [Setting up iOS](#setting-up-ios)
       3. [Setting up Android](#setting-up-android)
       4. [Reloading & Debugging](#reload-debugging)
-  2. [The Code](#the-code)
+  2. [The Demo Code](#the-code)
       1. [Redux](#redux)
       2. [Navigation](#navigation)
       3. [Components](#components)
@@ -64,7 +64,7 @@ Once you have the code running in the iOS simulator or the Android emulator, the
 
 React Native also provides convenient tools for debugging your application as you are running it. Since we are writing JavaScript, React Native provides a remote debugger that will let you inspect your code, place break points, and watch console output from your preferred browser. Simply press `cmd d` in the iOS simulator or `cmd m` in the Android emulator. This will bring up the developer menu where you can select `Enable Remote Debugging`. Your app will then reload and the remote debugging window will appear. You can turn off remote debugging by following the same commands as above and selecting `Disable Remote Debugging`. If you need to debug native code, you will have to fall back on the debugging capabilities in Xcode and Android Studio.
 
-## <a id="getting-started"></a>Getting Started with React Native
+## <a id="the-code"></a>The Demo Code
 
 #### <a id="redux"></a>Redux
 #### <a id="navigation"></a>Navigation
