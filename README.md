@@ -30,12 +30,14 @@ React Native CLI comes bundled with React Native or you can install it on it's o
 
 This now global version of the cli provides you with commands to create new React Native projects. It also ties into the local cli versions inside React Native projects and give you shortcuts for many of the basic tasks you will need to do. These include:
 
+```JavaScript
     $ react-native init <ProjectName> [options]
     $ react-native run-ios [options]
     $ react-native run-android
     $ react-native log-ios
     $ react-native log-android
     $ react-native bundle [options]
+```
 
 Behind the scenes, these commands are doing a number of different things. We will cover some of them later, but more detail can be found in React Native's documentation.
 
