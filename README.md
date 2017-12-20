@@ -1,13 +1,13 @@
 # React Native Demo Project
 
-
   1. [Getting Started](#getting-started)
       1. [React Native CLI](#react-native-cli)
       2. [Setting up iOS](#setting-up-ios)
       3. [Setting up Android](#setting-up-android)
       4. [Reloading & Debugging](#reload-debugging)
   2. [The Demo Code](#the-code)
-      1. [Redux](#redux)
+      1. [A Note on Redux](#redux)
+      2. [Entry Point](#entry-point)
       2. [Navigation](#navigation)
       3. [Components](#components)
       4. [Styling](#styling)
@@ -66,7 +66,14 @@ React Native also provides convenient tools for debugging your application as yo
 
 ## <a id="the-code"></a>The Demo Code
 
-#### <a id="redux"></a>Redux
+The code used to create this demo project is written using ES6 and the following walkthrough assumes a basic understanding of how JavaScript and the functions ES6 provide work. Please read through the ES6 [documentation](http://es6-features.org/#Constants) if you have questions about how any of it works.
+
+#### <a id="redux"></a>A Note on Redux
+
+This demo application is making use of Redux for it's store management. However, it is not necessary to know Redux to understand the React Native specific parts of this code. If you would like to learn more about Redux and how it might help you in your future development, check out their [documentation](https://redux.js.org/).
+
+#### <a id="entry-point"></a>Entry Point
+
 #### <a id="navigation"></a>Navigation
 #### <a id="components"></a>Components
 #### <a id="styling"></a>Styling
